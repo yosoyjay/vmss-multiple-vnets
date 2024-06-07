@@ -65,4 +65,4 @@ Note: Ensure references to InfiniBand devices such as those specified for NCCL_S
 
 ## Connecting the Front-End Networks
 
-The options to connect the front-end networks are to use peering setup between all the VNETs or using the hub-spoke setup with a Network Virtual Appliance (e.g. Azure Firewall) to route the traffic. These options are discussed here: Hub-spoke network topology in Azure - Azure Architecture Center | Microsoft Learn.
+The options to connect the front-end networks are to use peering setup between all the VNETs or using the hub-spoke setup with a Network Virtual Appliance (e.g. Azure Firewall) to route the traffic. These options are discussed here [Hub-spoke network topology in Azure - Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/hub-spoke?tabs=cli).
