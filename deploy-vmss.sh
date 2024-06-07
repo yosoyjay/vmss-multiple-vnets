@@ -30,6 +30,9 @@ for i in $(seq 1 $NUM_VMSS); do
         --name $VMSS_NAME \
         --image $IMAGE \
         --instance-count 0 \
+        --platform-fault-domain-count 1 \
+        --single-placement-group false \
+        --accelerated-networking true \
         --vm-sku $VM_SKU \
         --ssh-key-values $SSH_KEY_PATH \
         --admin-username azureuser \
