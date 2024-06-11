@@ -58,7 +58,7 @@ for i in $(seq 2 $NUM_VMSS); do
     # Update the VMSS "model" - Update the First VMSS to use the NSG, Load Balancer, and Subnet from the Second VMSS
     subnet_id=$(az network vnet subnet show --resource-group $RESOURCE_GROUP --vnet-name $VNET_NAME --name default --query id -o tsv)
     nsg_id=$(az network nsg list --resource-group $RESOURCE_GROUP --query "[?contains(name, '$VMSS_NAME')].id" -o tsv)
-    lb_bep_id=$(az network lb list --resource-group $RESOURCE_GROUP --query "[?contains(name, '$VMSS_NAME')].backendAddressPools[0].id" -o tsv)0
+    lb_bep_id=$(az network lb list --resource-group $RESOURCE_GROUP --query "[?contains(name, '$VMSS_NAME')].backendAddressPools[0].id" -o tsv)
 
     az vmss update \
         --resource-group $RESOURCE_GROUP \
